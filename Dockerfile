@@ -7,7 +7,7 @@ RUN apk add --update bash openssh-client\
     mkdir /root/.ssh
 
 WORKDIR /app
-ADD run.sh key /app/
+ADD run.sh /app/
 
 
 CMD ["/app/run.sh"]
