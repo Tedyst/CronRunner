@@ -8,6 +8,9 @@ while true; do
         then echo Running command $COMMAND on $TARGET
     fi
     echo "$COMMAND" | ssh -T -i /app/key $USER@$TARGET
+
+    [ -z "${PAUSE}" ] && echo "Exited since PAUSE not set." && exit 0
+
     sleep $PAUSE
 done
 
